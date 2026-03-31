@@ -2,10 +2,10 @@
 #SBATCH --job-name=canopy_par
 #SBATCH --partition=gpu
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=8
-#SBATCH --gpus-per-node=8
+#SBATCH --ntasks-per-node=4
+#SBATCH --gpus-per-node=4
 #SBATCH --cpus-per-task=8
-#SBATCH --time=5-00:00:00
+#SBATCH --time=24:00:00
 #SBATCH --output=logs/%x_%j_%N_%t.out
 #SBATCH --error=logs/%x_%j_%N_%t.err
 
