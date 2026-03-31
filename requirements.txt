@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+torch
+geomdl
+open3d
+xgboost
+lightgbm
+catboost
