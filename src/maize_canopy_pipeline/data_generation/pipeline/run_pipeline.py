@@ -17,10 +17,11 @@ Works on OCI (no `module` command) by passing --no_modules.
 """
 import os, sys
 
-# Imports
-from generate_catalog import main as generate_catalog_main
-from generate_canopies import load_catalog, generate_one_canopy
-from run_helios_single import run_helios_single as run_one_helios
+from ..catalog.generate_catalog import main as generate_catalog_main
+from ..geometry.generate_canopies import load_catalog, generate_one_canopy
+from ..simulation.run_helios_single import run_helios_single as run_one_helios
+from ..dataset.make_scaled_catalog import main as make_scaled_main
+from ..dataset.build_ml_dataset import main as build_ml_main
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if REPO_ROOT not in sys.path:

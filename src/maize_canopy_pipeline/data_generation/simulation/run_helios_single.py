@@ -8,7 +8,8 @@ import configparser
 import subprocess
 from typing import Dict, Optional, List, Tuple
 
-from generate_canopies import load_catalog, generate_one_canopy
+from ..catalog.generate_catalog import main as generate_catalog_main
+from ..geometry.generate_canopies import load_catalog, generate_one_canopy
 
 import numpy as np
 import pandas as pd
