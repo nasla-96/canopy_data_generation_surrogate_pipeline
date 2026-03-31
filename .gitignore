@@ -1,0 +1,4 @@
+data/sample_inputs/*.csv
+results/
+canopies/
+configs/
