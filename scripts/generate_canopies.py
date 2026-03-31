@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# scripts/generate_canopy_obj.py
+# scripts/generate_canopy.py
 #
 # UPDATED: catalog can be CSV or Parquet (auto-detected by extension),
 # defaulting to CSV per your new pipeline.
