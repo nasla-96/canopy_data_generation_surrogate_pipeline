@@ -4,12 +4,19 @@
 # UPDATED: catalog can be CSV or Parquet (auto-detected by extension),
 # defaulting to CSV per your new pipeline.
 
+
 import os
+import sys
 import numpy as np
 import pandas as pd
 import argparse
 
-from canopy_from_sobol import generate_canopy_obj_from_sobol
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC_ROOT = os.path.join(REPO_ROOT, "src")
+if SRC_ROOT not in sys.path:
+    sys.path.insert(0, SRC_ROOT)
+
+from maize_canopy_pipeline.geometry.canopy_from_sobol import generate_canopy_obj_from_sobol
 
 NUM_LEAVES = 12
 D_GEOM = 1 + 7 * NUM_LEAVES  # 85

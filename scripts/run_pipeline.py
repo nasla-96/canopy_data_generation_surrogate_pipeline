@@ -16,6 +16,12 @@ Restart-safe:
 Works on OCI (no `module` command) by passing --no_modules.
 """
 import os, sys
+
+# Imports
+from generate_catalog import main as generate_catalog_main
+from generate_canopies import load_catalog, generate_one_canopy
+from run_helios_single import run_helios_single as run_one_helios
+
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
@@ -154,11 +160,6 @@ def main():
         raise SystemExit(f"Invalid range: start_id={start_id}, end_id={end_id}")
 
     device_ids = _parse_int_list(args.device_ids) or [0]
-
-    # Imports
-    from generate_catalog_csv import main as generate_catalog_main
-    from generate_canopy_obj_csv import load_catalog, generate_one_canopy
-    from run_helios_single_csv import run_helios_single as run_one_helios
 
     # (0) Optionally extend catalog
     if args.extend_catalog:

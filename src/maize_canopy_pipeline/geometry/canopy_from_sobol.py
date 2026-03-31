@@ -5,7 +5,7 @@ from typing import Union, Optional, List
 import numpy as np
 from geomdl import exchange, multi
 
-from canopy_geometry import change_leaf_parameters
+from .canopy_geometry import change_leaf_parameters
 
 # Extra imports for building a full canopy field from a single plant OBJ
 import open3d as o3d

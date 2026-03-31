@@ -8,6 +8,8 @@ import configparser
 import subprocess
 from typing import Dict, Optional, List, Tuple
 
+from generate_canopies import load_catalog, generate_one_canopy
+
 import numpy as np
 import pandas as pd
 from typing import Optional
@@ -161,7 +163,6 @@ def _ensure_canopy_obj(
             "obj_path": candidates[0],
         }
 
-    from generate_canopy_obj import load_catalog, generate_one_canopy
 
     if not os.path.exists(catalog_path):
         return {
